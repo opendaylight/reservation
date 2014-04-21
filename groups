@@ -1,0 +1,6 @@
+# UUID                                  	Group Name
+#
+060b5ee415b76d8389960e1d2d58b95436e4296c	Non-interactive reservation users
+global:Anonymous-Users                  	Anonymous Users
+global:Registered-Users                 	Registered Users
+ldap:cn=gerrit-reservation-committers,ou=Groups,dc=opendaylight,dc=org	ldap/gerrit-reservation-committers

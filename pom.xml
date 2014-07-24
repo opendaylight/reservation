@@ -506,6 +506,13 @@
     </pluginRepositories>
 
     <modules>
+      <module>reservation-service</module>
+      <module>connection-service</module>
+      <module>pce-service</module>
+      <module>nsi-adapter</module>
+      <module>of-config-southbound</module>
+      <module>tl1-southbound</module>
+      <module>models</module>
       <module>features</module>
     </modules>
 </project>

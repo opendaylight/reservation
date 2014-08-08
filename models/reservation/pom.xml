@@ -11,9 +11,9 @@
         <relativePath>../</relativePath>
     </parent>
     <groupId>org.opendaylight.reservation</groupId>
-    <artifactId>multi-layer-model</artifactId>
+    <artifactId>reservation-models</artifactId>
     <packaging>bundle</packaging>
-    <name>Dynamic Resource Reservation :: Models :: Multi Layer Model </name>
+    <name>Dynamic Resource Reservation :: Models :: Reservation Model </name>
 
     <dependencies>
     <dependency>

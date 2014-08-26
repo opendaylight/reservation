@@ -1,0 +1,25 @@
+module multi-layer-model {
+  yang-version 1;
+
+  namespace
+    "http://www.inocybe.com";
+
+  prefix connection;
+
+  organization "Inocybe";
+
+  contact
+    "Mathieu Lemay <mlemay@inocybe.com>,
+     Arash Eghtesadi <aeghtesadi@inocybe.com>,
+     Gabriel Robitaille-Montpetit <grmontpetit@inocybe.com>,
+     Jonathan Fok Kan <jfokkan@inocybe.com>";
+
+  description
+    "YANG version of the RESERVATION";
+
+  revision "2014-08-07" {
+    description
+      "Reservation model in progress.";
+  }
+
+}

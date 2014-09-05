@@ -7,13 +7,31 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>features-reservation</artifactId>
-  <name>DRR :: Karaf Features</name>
-  <packaging>pom</packaging>
-  
+  <name>Dynamic Resource Reservation :: Features</name>
+  <packaging>jar</packaging>
+
   <properties>
     <features.file>features.xml</features.file>
-  </properties> 
-
+  </properties>
+  <dependencies>
+     <dependency>
+       <groupId>org.opendaylight.openflowplugin</groupId>
+       <artifactId>features-openflowplugin</artifactId>
+       <version>${openflow.plugin.version}</version>
+       <classifier>features</classifier>
+       <type>xml</type>
+     </dependency>
+     <dependency>
+         <groupId>org.opendaylight.yangtools</groupId>
+         <artifactId>features-test</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.opendaylight.controller</groupId>
+         <artifactId>opendaylight-karaf-empty</artifactId>
+         <version>${commons.opendaylight.version}</version>
+         <type>zip</type>
+      </dependency>
+  </dependencies>
   <build>
     <resources>
       <resource>
@@ -21,23 +39,21 @@
         <directory>src/main/resources</directory>
       </resource>
     </resources>
-    <plugins>
+   <plugins>
       <plugin>
-        <groupId>org.apache.karaf.tooling</groupId>
-        <artifactId>karaf-maven-plugin</artifactId>
-        <version>${karaf.version}</version>
-        <extensions>true</extensions>
-        <executions>
-            <execution>
-                <id>features-create-kar</id>
-                <goals>
-                    <goal>features-create-kar</goal>
-                </goals>
-                <configuration>
-                    <featuresFile>${project.build.directory}/classes/${features.file}</featuresFile>
-                </configuration>                
-            </execution>
-        </executions>            
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.16</version>
+        <configuration>
+          <systemPropertyVariables>
+            <karaf.distro.groupId>org.opendaylight.controller</karaf.distro.groupId>
+            <karaf.distro.artifactId>opendaylight-karaf-empty</karaf.distro.artifactId>
+            <karaf.distro.version>${commons.opendaylight.version}</karaf.distro.version>
+          </systemPropertyVariables>
+          <dependenciesToScan>
+           <dependency>org.opendaylight.yangtools:features-test</dependency>
+          </dependenciesToScan>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -74,12 +90,20 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <systemPropertyVariables>
+            <karaf.distro.groupId>org.opendaylight.controller</karaf.distro.groupId>
+            <karaf.distro.artifactId>opendaylight-karaf-empty</karaf.distro.artifactId>
+            <karaf.distro.version>${commons.opendaylight.version}</karaf.distro.version>
+          </systemPropertyVariables>
+          <dependenciesToScan>
+           <dependency>org.opendaylight.yangtools:features-test</dependency>
+          </dependenciesToScan>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
-  <scm>
-    <connection>scm:git:ssh://git.opendaylight.org:29418/openflowplugin.git</connection>
-    <developerConnection>scm:git:ssh://git.opendaylight.org:29418/openflowplugin.git</developerConnection>
-    <tag>HEAD</tag>
-    <url>https://wiki.opendaylight.org/view/OpenDaylight_OpenFlow_Plugin:Main</url>
-  </scm>
 </project>

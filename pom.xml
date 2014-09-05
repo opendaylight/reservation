@@ -46,7 +46,10 @@
       <mdsal.version>1.1-SNAPSHOT</mdsal.version>
       <nexusproxy>http://nexus.opendaylight.org/content</nexusproxy>
       <controller.model.version>1.1-SNAPSHOT</controller.model.version>
+      <commons.opendaylight.version>1.4.2-SNAPSHOT</commons.opendaylight.version>
       <osgi.core.version>5.0.0</osgi.core.version>
+      <openflow.plugin.version>0.0.3-SNAPSHOT</openflow.plugin.version>
+      <openflowjava.version>0.5-SNAPSHOT</openflowjava.version>
       <sal.api.version>0.8.1-SNAPSHOT</sal.api.version>
       <sal.connection.api.version>0.1.2-SNAPSHOT</sal.connection.api.version>
       <netconf.parent.version>0.2.5-SNAPSHOT</netconf.parent.version>
@@ -70,7 +73,11 @@
           <artifactId>javassist</artifactId>
           <version>3.17.1-GA</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.opendaylight.yangtools</groupId>
+            <artifactId>features-test</artifactId>
+            <version>0.6.2-SNAPSHOT</version>
+         </dependency>
         <dependency>
           <groupId>com.google.guava</groupId>
           <artifactId>guava</artifactId>
@@ -321,6 +328,12 @@
           <plugin>
              <groupId>org.codehaus.mojo</groupId>
              <artifactId>build-helper-maven-plugin</artifactId>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>maven-bundle-plugin</artifactId>
+            <version>2.4.0</version>
+            <extensions>true</extensions>
           </plugin>
         </plugins>
         <pluginManagement>

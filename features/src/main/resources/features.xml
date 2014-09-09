@@ -9,11 +9,6 @@
     <feature version="${project.version}">odl-reservation-reservation-service</feature>
   </feature>
 
-  <feature name='odl-reservation-multilayer-models' description="OpenDaylight :: Reservation :: Multilayer Models" version='${project.version}'>
-    <feature version="${mdsal.version}">odl-mdsal-broker</feature>
-    <bundle>mvn:org.opendaylight.reservation/multi-layer-model/${project.version}</bundle>
-  </feature>
-
   <feature name='odl-reservation-models' description="OpenDaylight :: Reservation :: Reservation Models" version='${project.version}'>
     <feature>odl-reservation-multilayer-models</feature>
     <bundle>mvn:org.opendaylight.reservation/connection-models/${project.version}</bundle>

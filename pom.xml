@@ -108,7 +108,66 @@
           <artifactId>org.apache.felix.gogo.shell</artifactId>
           <version>0.8.0.v201110170705</version>
         </dependency>
-
+     <dependency>
+         <groupId>org.opendaylight.yangtools</groupId>
+         <artifactId>features-test</artifactId>
+         <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>connection-models</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>path-models</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>provisioning-models</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>service-definition-models</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>reservation-service-api</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>pce-service-implementation</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>pce-service-implementation</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>reservation-service-implementation</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>connection-service-api</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>connection-service-implementation</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>connection-service-implementation</artifactId>
+        <version>${project.version}</version>
+      </dependency>
         <dependency>
           <groupId>org.opendaylight.openflowjava</groupId>
           <artifactId>openflow-protocol-impl</artifactId>

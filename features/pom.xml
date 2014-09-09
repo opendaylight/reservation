@@ -26,6 +26,52 @@
          <artifactId>features-test</artifactId>
       </dependency>
       <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>connection-models</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>path-models</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>provisioning-models</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>service-definition-models</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>reservation-service-api</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>pce-service-implementation</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>pce-service-implementation</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>reservation-service-implementation</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>connection-service-api</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>connection-service-implementation</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>connection-service-implementation</artifactId>
+      </dependency>
+
+
+      <dependency>
          <groupId>org.opendaylight.controller</groupId>
          <artifactId>opendaylight-karaf-empty</artifactId>
          <version>${commons.opendaylight.version}</version>

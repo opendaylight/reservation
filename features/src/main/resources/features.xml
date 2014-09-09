@@ -17,7 +17,6 @@
   <feature name='odl-reservation-models' description="OpenDaylight :: Reservation :: Reservation Models" version='${project.version}'>
     <feature>odl-reservation-multilayer-models</feature>
     <bundle>mvn:org.opendaylight.reservation/connection-models/${project.version}</bundle>
-    <bundle>mvn:org.opendaylight.reservation/multi-layer-model/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/path-models/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/provisioning-models/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/service-definition-models/${project.version}</bundle>

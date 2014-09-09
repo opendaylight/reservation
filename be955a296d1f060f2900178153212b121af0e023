@@ -1,0 +1,7 @@
+Code-Review+2: Mathieu Lemay <mlemay@inocybe.com>
+Verified+1: jenkins-reservation <jenkins-reservation@opendaylight.org>
+Submitted-by: Mathieu Lemay <mlemay@inocybe.com>
+Submitted-at: Tue, 09 Sep 2014 22:30:04 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/10962
+Project: reservation
+Branch: refs/heads/master

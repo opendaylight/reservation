@@ -24,8 +24,8 @@
 
   <feature name='odl-reservation-pce-service' description="OpenDaylight :: Reservation :: PCE Service" version='${project.version}'>
     <feature>odl-reservation-models</feature>
-    <bundle>mvn:org.opendaylight.reservation/reservation-service-api/${project.version}</bundle>
-    <bundle>mvn:org.opendaylight.reservation/reservation-service-implementation/${project.version}</bundle>
+    <bundle>mvn:org.opendaylight.reservation/pce-service-api/${project.version}</bundle>
+    <bundle>mvn:org.opendaylight.reservation/pce-service-implementation/${project.version}</bundle>
   </feature>
 
   <feature name='odl-reservation-connection-service' description="OpenDaylight :: Reservation :: Connection Service" version='${project.version}'>
@@ -41,7 +41,7 @@
     <bundle>mvn:org.opendaylight.reservation/reservation-service-implementation/${project.version}</bundle>
   </feature>
 
-    <!--<feature name="odl-extras-spray" description="Spray (REST) Support" version="${spray.version}" resolver="(obr)" start-level="50">
+    <!--<feature name="odl-extras-spray" description="Spray (REST) Support" version="${spray.version}" resolver="(obr)" >
     <feature version="${akka.version}">odl-extras-akka-system</feature>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-servlet_3.0_spec/1.0</bundle>
     <bundle>wrap:mvn:com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/${concurrentlinkedhashmap.version}</bundle>

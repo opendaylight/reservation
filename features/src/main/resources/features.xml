@@ -10,6 +10,7 @@
   </feature>
 
   <feature name='odl-reservation-models' description="OpenDaylight :: Reservation :: Reservation Models" version='${project.version}'>
+    <bundle>mvn:com.google.guava/guava/${guava.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/connection-models/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/path-models/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/provisioning-models/${project.version}</bundle>

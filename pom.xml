@@ -141,27 +141,22 @@
       </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>pce-service-implementation</artifactId>
+        <artifactId>reservation-implementation</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>pce-service-api</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
         <artifactId>pce-service-implementation</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>reservation-service-implementation</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
         <artifactId>connection-service-api</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>connection-service-implementation</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>

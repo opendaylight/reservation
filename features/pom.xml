@@ -21,7 +21,7 @@
        <classifier>features</classifier>
        <type>xml</type>
      </dependency>
-     <dependency>
+      <dependency>
          <groupId>org.opendaylight.yangtools</groupId>
          <artifactId>features-test</artifactId>
       </dependency>
@@ -43,15 +43,15 @@
       </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>pce-service-api</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
+        <artifactId>pce-service-implementation</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.opendaylight.reservation</groupId>
         <artifactId>reservation-service-api</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>pce-service-implementation</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>pce-service-implementation</artifactId>
       </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
@@ -65,12 +65,6 @@
         <groupId>org.opendaylight.reservation</groupId>
         <artifactId>connection-service-implementation</artifactId>
       </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>connection-service-implementation</artifactId>
-      </dependency>
-
-
       <dependency>
          <groupId>org.opendaylight.controller</groupId>
          <artifactId>opendaylight-karaf-empty</artifactId>

@@ -10,11 +10,13 @@
         <version>1.4.2-SNAPSHOT</version>
         <relativePath></relativePath>
     </parent>
+
     <groupId>org.opendaylight.reservation</groupId>
     <artifactId>reservation-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <name>reservation</name> <!-- Used by Sonar to set project name -->
     <packaging>pom</packaging>
-    <name>Dynamic Resource Reservation</name>
+
     <scm>
       <connection>scm:git:ssh://git.opendaylight.org:29418/reservation.git</connection>
       <developerConnection>scm:git:ssh://git.opendaylight.org:29418/reservation.git</developerConnection>

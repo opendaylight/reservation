@@ -5,9 +5,9 @@
    xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
   <repository>mvn:org.opendaylight.openflowplugin/features-openflowplugin/${openflow.plugin.version}/xml/features</repository>
 
-  <feature name='odl-reservation-all' description="OpenDaylight :: Reservation :: All" version='${project.version}'>
+  <!--<feature name='odl-reservation-all' description="OpenDaylight :: Reservation :: All" version='${project.version}'>
     <feature version="${project.version}">odl-reservation-reservation-service</feature>
-  </feature>
+  </feature>-->
 
   <feature name='odl-reservation-models' description="OpenDaylight :: Reservation :: Reservation Models" version='${project.version}'>
     <feature version="${mdsal.version}">odl-mdsal-broker</feature>

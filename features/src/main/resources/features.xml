@@ -5,9 +5,9 @@
    xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
   <repository>mvn:org.opendaylight.openflowplugin/features-openflowplugin/${openflow.plugin.version}/xml/features</repository>
 
-  <feature name='odl-reservation-all' description="OpenDaylight :: Reservation :: All" version='${project.version}'>
+  <!--<feature name='odl-reservation-all' description="OpenDaylight :: Reservation :: All" version='${project.version}'>
     <feature version="${project.version}">odl-reservation-reservation-service</feature>
-  </feature>
+  </feature>-->
 
   <feature name='odl-reservation-models' description="OpenDaylight :: Reservation :: Reservation Models" version='${project.version}'>
     <feature version="${mdsal.version}">odl-mdsal-broker</feature>
@@ -17,24 +17,23 @@
     <bundle>mvn:org.opendaylight.reservation/service-definition-models/${project.version}</bundle>
   </feature>
 
-  <feature name='odl-reservation-pce-service' description="OpenDaylight :: Reservation :: PCE Service" version='${project.version}'>
+  <!--<feature name='odl-reservation-pce-service' description="OpenDaylight :: Reservation :: PCE Service" version='${project.version}'>
     <feature>odl-reservation-models</feature>
     <bundle>mvn:org.opendaylight.reservation/pce-service-api/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/pce-service-implementation/${project.version}</bundle>
-  </feature>
+  </feature>-->
 
-  <feature name='odl-reservation-connection-service' description="OpenDaylight :: Reservation :: Connection Service" version='${project.version}'>
+  <!--<feature name='odl-reservation-connection-service' description="OpenDaylight :: Reservation :: Connection Service" version='${project.version}'>
     <feature>odl-reservation-pce-service</feature>
     <feature version="${openflow.plugin.version}">odl-openflowplugin-flow-services</feature>
     <bundle>mvn:org.opendaylight.reservation/connection-service-api/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/connection-service-implementation/${project.version}</bundle>
-  </feature>
+  </feature>-->
 
-  <feature name='odl-reservation-reservation-service' description="OpenDaylight :: Reservation :: Reservation Service" version='${project.version}'>
-    <feature>odl-reservation-connection-service</feature>
+  <!--<feature name='odl-reservation-reservation-service' description="OpenDaylight :: Reservation :: Reservation Service" version='${project.version}'>
     <bundle>mvn:org.opendaylight.reservation/reservation-service-api/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/reservation-service-implementation/${project.version}</bundle>
-  </feature>
+  </feature>-->
 
     <!--<feature name="odl-extras-spray" description="Spray (REST) Support" version="${spray.version}" resolver="(obr)" >
     <feature version="${akka.version}">odl-extras-akka-system</feature>

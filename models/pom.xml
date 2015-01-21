@@ -14,12 +14,4 @@
     <artifactId>models</artifactId>
     <packaging>pom</packaging>
     <name>Dynamic Resource Reservation :: Models</name>
-    <modules>
-       <module>multi-layer-model</module>
-       <module>connection</module>
-       <module>reservation</module>
-       <module>path</module>
-       <module>provisioning</module>
-       <module>service-definition</module>
-    </modules>
 </project>

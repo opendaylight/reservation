@@ -5,3 +5,25 @@
  * terms of the Eclipse Public License v1.0 which accompanies this distribution,
  * and is available at http://www.eclipse.org/legal/epl-v10.html
  */
+module models {
+    yang-version 1;
+
+    namespace "urn:opendaylight:reservation-models:models";
+    prefix "models";
+
+    import models-groupings{prefix models-groupings;}
+
+    description
+        "Reservation models.";
+
+    revision 2015-01-22 {
+        description
+            "Initial revision.";
+    }
+
+    list reservation {
+        description 
+          "Represents a reservation.";
+        uses models-groupings:reservation-fields;
+    }
+}

@@ -5,3 +5,59 @@
  * terms of the Eclipse Public License v1.0 which accompanies this distribution,
  * and is available at http://www.eclipse.org/legal/epl-v10.html
  */
+module models-groupings {
+    yang-version 1;
+
+    namespace "urn:opendaylight:reservation-models:models-groupings";
+    prefix "models-groupings";
+
+    import models-common{prefix models-common;}
+    description
+        "Groupings for reservation models.";
+
+    revision 2015-01-22 {
+        description
+            "Initial revision.";
+    }
+
+    grouping l2-endpoint-fields {
+        description
+          "Grouping for a layer 2 endpoint.";
+        leaf address {
+            type models-common:mac-address;
+        }
+    }
+
+    grouping l3-endpoint-fields {
+        description
+            "Grouping for a layer 3 endpoint.";
+        leaf address {
+            type models-common:ip-address;
+        }
+    }
+
+    grouping physical-endpoint-fields {
+        description
+            "Grouping for a layer 3 endpoint.";
+        leaf address {
+            type models-common:phys-address;
+        }
+    }
+
+    grouping reservation-fields {
+        description
+            "Grouping for a layer 3 endpoint.";
+        leaf effective-start {
+            type models-common:date-and-time;
+        }
+        leaf effective-end {
+            type models-common:date-and-time;
+        }
+        leaf endpoint-start {
+            type models-common:address;
+        }
+        leaf endpoint-end {
+            type models-common:address;
+        }
+    }
+}

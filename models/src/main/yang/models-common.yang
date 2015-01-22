@@ -69,6 +69,14 @@ module models-common{
       }
     }
 
+    typedef address {
+      type union {
+          type phys-address;
+          type mac-address;
+          type ip-address;
+      }
+    }
+
     typedef phys-address {
       type string {
         pattern '([0-9a-fA-F]{2}(:[0-9a-fA-F]{2})*)?';

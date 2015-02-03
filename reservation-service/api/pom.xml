@@ -10,7 +10,7 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
-    <groupId>org.opendaylight.reservation</groupId>
+
     <artifactId>reservation-service-api</artifactId>
     <packaging>bundle</packaging>
     <name>Dynamic Resource Reservation :: Reservation Service :: API</name>
@@ -62,7 +62,6 @@
       <plugin>
               <groupId>org.apache.felix</groupId>
               <artifactId>maven-bundle-plugin</artifactId>
-              <version>${maven.bundle.version}</version>
               <extensions>true</extensions>
               <configuration>
                 <instructions>

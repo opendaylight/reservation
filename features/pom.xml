@@ -21,33 +21,16 @@
        <classifier>features</classifier>
        <type>xml</type>
      </dependency>
+     <dependency>
+       <groupId>org.opendaylight.yangtools</groupId>
+       <artifactId>features-yangtools</artifactId>
+       <version>${yangtools.version}</version>
+       <classifier>features</classifier>
+       <type>xml</type>
+     </dependency>
       <dependency>
          <groupId>org.opendaylight.yangtools</groupId>
          <artifactId>features-test</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>connection-models</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>path-models</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>provisioning-models</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>service-definition-models</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>pce-service-api</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>pce-service-implementation</artifactId>
       </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
@@ -56,14 +39,6 @@
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
         <artifactId>reservation-service-implementation</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>connection-service-api</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>connection-service-implementation</artifactId>
       </dependency>
       <dependency>
          <groupId>org.opendaylight.controller</groupId>
@@ -83,7 +58,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.16</version>
         <configuration>
           <systemPropertyVariables>
             <karaf.distro.groupId>org.opendaylight.controller</karaf.distro.groupId>

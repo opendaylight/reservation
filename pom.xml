@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.opendaylight.odlparent</groupId>
         <artifactId>odlparent</artifactId>
-        <version>1.4.2-SNAPSHOT</version>
+        <version>1.5.0-SNAPSHOT</version>
         <relativePath></relativePath>
     </parent>
     <groupId>org.opendaylight.reservation</groupId>
@@ -47,30 +47,42 @@
     </distributionManagement>
 
     <properties>
-      <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-      <karaf.version>3.0.1</karaf.version>
-      <mdsal.version>1.1-SNAPSHOT</mdsal.version>
+      <build.helper.version>1.8</build.helper.version>
+      <build.plugins.plugin.version></build.plugins.plugin.version>
+      <bundle.plugin.version>2.4.0</bundle.plugin.version>
+      <controller.model.version>1.2.0-SNAPSHOT</controller.model.version>
+      <commons.codec.version>1.8</commons.codec.version>
+      <commons.lang.version>2.6</commons.lang.version>
+      <commons.opendaylight.version>1.5.0-SNAPSHOT</commons.opendaylight.version>
+      <config.parent.version>0.2.5-SNAPSHOT</config.parent.version>
+      <exi.nagasena.version>0000.0002.0038.0</exi.nagasena.version>
+      <findbugs.maven.version>2.5.2</findbugs.maven.version>
+      <ganymed.version>1.1-SNAPSHOT</ganymed.version>
       <guava.version>14.0.1</guava.version>
+      <java.version>1.7</java.version>
+      <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
+      <junit.version>4.11</junit.version>
+      <karaf.version>3.0.1</karaf.version>
+      <maven.bundle.version>2.4.0</maven.bundle.version>
+      <maven.jxr.plugin.version>2.3</maven.jxr.plugin.version>
+      <maven.pmd.plugin>3.0.1</maven.pmd.plugin>
+      <mdsal.version>1.2.0-SNAPSHOT</mdsal.version>
+      <mockito.versiob>1.9.5</mockito.versiob>
+      <netconf.parent.version>0.3.0-SNAPSHOT</netconf.parent.version>
       <nexusproxy>http://nexus.opendaylight.org/content</nexusproxy>
-      <controller.model.version>1.1-SNAPSHOT</controller.model.version>
-      <commons.opendaylight.version>1.4.2-SNAPSHOT</commons.opendaylight.version>
       <osgi.core.version>5.0.0</osgi.core.version>
       <openflow.plugin.version>0.0.3-SNAPSHOT</openflow.plugin.version>
-      <openflowjava.version>0.5-SNAPSHOT</openflowjava.version>
-      <sal.api.version>0.8.1-SNAPSHOT</sal.api.version>
+      <openflowjava.version>0.6.0-SNAPSHOT</openflowjava.version>
+      <pax.exam.version>1.2.4</pax.exam.version>
+      <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+      <sal.version>0.9.0-SNAPSHOT</sal.version>
       <sal.connection.api.version>0.1.2-SNAPSHOT</sal.connection.api.version>
-      <netconf.parent.version>0.2.5-SNAPSHOT</netconf.parent.version>
-      <config.parent.version>0.2.5-SNAPSHOT</config.parent.version>
-      <build.helper.version>1.8</build.helper.version>
-      <xtend.version>2.4.3</xtend.version>
-      <xtend.dstdir>src/main/xtend-gen</xtend.dstdir>
-      <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
       <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
-      <maven.bundle.version>2.4.0</maven.bundle.version>
-      <exi.nagasena.version>0000.0002.0038.0</exi.nagasena.version>
-      <yangtools.version>0.6.2-SNAPSHOT</yangtools.version>
-      <bundle.plugin.version>2.4.0</bundle.plugin.version>
-      <build.plugins.plugin.version></build.plugins.plugin.version>
+      <xml-apis.version>1.4.01</xml-apis.version>
+      <xtend.dstdir>src/main/xtend-gen</xtend.dstdir>
+      <xtend.version>2.4.3</xtend.version>
+      <xtend-lib-osgi.version>2.4.3</xtend-lib-osgi.version>
+      <yangtools.version>0.7.0-SNAPSHOT</yangtools.version>
     </properties>
 
     <dependencyManagement>
@@ -83,7 +95,7 @@
         <dependency>
             <groupId>org.opendaylight.yangtools</groupId>
             <artifactId>features-test</artifactId>
-            <version>0.6.2-SNAPSHOT</version>
+            <version>${yangtools.version}</version>
          </dependency>
         <dependency>
           <groupId>com.google.guava</groupId>
@@ -122,52 +134,12 @@
       </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>connection-models</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>path-models</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>provisioning-models</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>service-definition-models</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
         <artifactId>reservation-service-api</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
         <artifactId>reservation-service-implementation</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>pce-service-api</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>pce-service-implementation</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>connection-service-api</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>connection-service-implementation</artifactId>
         <version>${project.version}</version>
       </dependency>
         <dependency>
@@ -223,7 +195,7 @@
         <dependency>
             <groupId>org.opendaylight.controller</groupId>
             <artifactId>sal</artifactId>
-            <version>${sal.api.version}</version>
+            <version>${sal.version}</version>
         </dependency>
         <dependency>
             <groupId>org.opendaylight.controller</groupId>
@@ -312,7 +284,7 @@
         <dependency>
           <groupId>org.opendaylight.controller.thirdparty</groupId>
           <artifactId>ganymed</artifactId>
-          <version>1.1-SNAPSHOT</version>
+          <version>${ganymed.version}</version>
         </dependency>
 
 
@@ -320,7 +292,7 @@
         <dependency>
             <groupId>xml-apis</groupId>
             <artifactId>xml-apis</artifactId>
-            <version>1.4.01</version>
+            <version>${xml-apis.version}</version>
         </dependency>
 
         <dependency>
@@ -347,7 +319,7 @@
         <dependency>
             <groupId>org.opendaylight.yangtools.thirdparty</groupId>
             <artifactId>xtend-lib-osgi</artifactId>
-            <version>2.4.3</version>
+            <version>${xtend-lib-osgi.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -361,24 +333,24 @@
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
+            <version>${commons.lang.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.7</version>
+            <version>${commons.codec.version}</version>
         </dependency>
 
         <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
-          <version>4.11</version>
+          <version>${junit.version}</version>
           <scope>test</scope>
         </dependency>
         <dependency>
           <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
-            <version>1.9.5</version>
+            <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
       </dependencies>
@@ -393,7 +365,6 @@
           <plugin>
             <groupId>org.apache.felix</groupId>
             <artifactId>maven-bundle-plugin</artifactId>
-            <version>2.4.0</version>
             <extensions>true</extensions>
           </plugin>
         </plugins>
@@ -403,14 +374,14 @@
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
               <configuration>
-                <source>1.7</source>
-                <target>1.7</target>
+                <source>${java.version}</source>
+                <target>${java.version}</target>
               </configuration>
             </plugin>
             <plugin>
               <groupId>org.ops4j.pax.exam</groupId>
               <artifactId>maven-paxexam-plugin</artifactId>
-              <version>1.2.4</version>
+              <version>${pax.exam.version}</version>
             </plugin>
             <plugin>
               <groupId>org.eclipse.xtend</groupId>
@@ -526,17 +497,17 @@
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>findbugs-maven-plugin</artifactId>
-              <version>2.5.2</version>
+              <version>${findbugs.maven.version}</version>
             </plugin>
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-pmd-plugin</artifactId>
-              <version>3.0.1</version>
+              <version>${maven.pmd.plugin.version}</version>
             </plugin>
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-jxr-plugin</artifactId>
-              <version>2.3</version>
+              <version>${maven.jxr.plugin.version}</version>
             </plugin>
           </plugins>
         </reporting>

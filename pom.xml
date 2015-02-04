@@ -50,7 +50,6 @@
       <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
       <karaf.version>3.0.1</karaf.version>
       <mdsal.version>1.1-SNAPSHOT</mdsal.version>
-      <guava.version>14.0.1</guava.version>
       <nexusproxy>http://nexus.opendaylight.org/content</nexusproxy>
       <controller.model.version>1.1-SNAPSHOT</controller.model.version>
       <commons.opendaylight.version>1.4.2-SNAPSHOT</commons.opendaylight.version>
@@ -88,7 +87,6 @@
         <dependency>
           <groupId>com.google.guava</groupId>
           <artifactId>guava</artifactId>
-          <version>${guava.version}</version>
         </dependency>
         <dependency>
           <groupId>equinoxSDK381</groupId>

@@ -62,8 +62,6 @@
       <netconf.parent.version>0.2.5-SNAPSHOT</netconf.parent.version>
       <config.parent.version>0.2.5-SNAPSHOT</config.parent.version>
       <build.helper.version>1.8</build.helper.version>
-      <xtend.version>2.4.3</xtend.version>
-      <xtend.dstdir>src/main/xtend-gen</xtend.dstdir>
       <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
       <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
       <maven.bundle.version>2.4.0</maven.bundle.version>
@@ -413,30 +411,9 @@
               <version>1.2.4</version>
             </plugin>
             <plugin>
-              <groupId>org.eclipse.xtend</groupId>
-              <artifactId>xtend-maven-plugin</artifactId>
-              <version>${xtend.version}</version>
-              <executions>
-                  <execution>
-                      <goals>
-                          <goal>compile</goal>
-                      </goals>
-                      <configuration>
-                          <outputDirectory>${xtend.dstdir}</outputDirectory>
-                      </configuration>
-                  </execution>
-              </executions>
-          </plugin>
-          <plugin>
               <artifactId>maven-clean-plugin</artifactId>
               <configuration>
                   <filesets>
-                      <fileset>
-                          <directory>${xtend.dstdir}</directory>
-                          <includes>
-                              <include>**</include>
-                          </includes>
-                      </fileset>
                       <fileset>
                           <directory>${jmxGeneratorPath}</directory>
                           <includes>
@@ -467,7 +444,6 @@
                       <sources>
                          <source>${jmxGeneratorPath}</source>
                          <source>${salGeneratorPath}</source>
-                         <source>${xtend.dstdir}</source>
                       </sources>
                    </configuration>
                 </execution>

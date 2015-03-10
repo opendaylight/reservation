@@ -69,7 +69,6 @@
       <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
       <maven.bundle.version>2.4.0</maven.bundle.version>
       <exi.nagasena.version>0000.0002.0038.0</exi.nagasena.version>
-      <yangtools.version>0.6.2-SNAPSHOT</yangtools.version>
       <bundle.plugin.version>2.4.0</bundle.plugin.version>
       <build.plugins.plugin.version></build.plugins.plugin.version>
     </properties>
@@ -80,11 +79,6 @@
           <groupId>org.javassist</groupId>
           <artifactId>javassist</artifactId>
           <version>3.17.1-GA</version>
-        </dependency>
-        <dependency>
-          <groupId>org.opendaylight.yangtools</groupId>
-          <artifactId>features-test</artifactId>
-          <version>0.6.2-SNAPSHOT</version>
         </dependency>
         <dependency>
           <groupId>equinoxSDK381</groupId>
@@ -111,11 +105,6 @@
           <artifactId>org.apache.felix.gogo.shell</artifactId>
           <version>0.8.0.v201110170705</version>
         </dependency>
-     <dependency>
-         <groupId>org.opendaylight.yangtools</groupId>
-         <artifactId>features-test</artifactId>
-         <version>${yangtools.version}</version>
-      </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
         <artifactId>connection-models</artifactId>

@@ -82,11 +82,6 @@
           <version>3.17.1-GA</version>
         </dependency>
         <dependency>
-          <groupId>org.opendaylight.yangtools</groupId>
-          <artifactId>features-test</artifactId>
-          <version>0.7.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
           <groupId>equinoxSDK381</groupId>
           <artifactId>org.eclipse.osgi</artifactId>
           <version>3.8.1.v20120830-144521</version>
@@ -111,11 +106,6 @@
           <artifactId>org.apache.felix.gogo.shell</artifactId>
           <version>0.8.0.v201110170705</version>
         </dependency>
-     <dependency>
-         <groupId>org.opendaylight.yangtools</groupId>
-         <artifactId>features-test</artifactId>
-         <version>${yangtools.version}</version>
-      </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
         <artifactId>connection-models</artifactId>

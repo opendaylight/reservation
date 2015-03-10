@@ -22,8 +22,9 @@
        <type>xml</type>
      </dependency>
       <dependency>
-         <groupId>org.opendaylight.yangtools</groupId>
+         <groupId>org.opendaylight.odlparent</groupId>
          <artifactId>features-test</artifactId>
+         <version>1.5.0-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.opendaylight.reservation</groupId>
@@ -91,7 +92,7 @@
             <karaf.distro.version>${commons.opendaylight.version}</karaf.distro.version>
           </systemPropertyVariables>
           <dependenciesToScan>
-           <dependency>org.opendaylight.yangtools:features-test</dependency>
+           <dependency>org.opendaylight.odlparent:features-test</dependency>
           </dependenciesToScan>
         </configuration>
       </plugin>
@@ -140,7 +141,7 @@
             <karaf.distro.version>${commons.opendaylight.version}</karaf.distro.version>
           </systemPropertyVariables>
           <dependenciesToScan>
-           <dependency>org.opendaylight.yangtools:features-test</dependency>
+           <dependency>org.opendaylight.odlparent:features-test</dependency>
           </dependenciesToScan>
         </configuration>
       </plugin>

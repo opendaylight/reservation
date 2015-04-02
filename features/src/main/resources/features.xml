@@ -11,11 +11,11 @@
 
   <feature name='odl-reservation-models' description="OpenDaylight :: Reservation :: Reservation Models" version='${project.version}'>
     <feature version="${mdsal.version}">odl-mdsal-broker</feature>
-    <bundle>mvn:org.opendaylight.reservation/connection-models/${project.version}</bundle>
+<!--    <bundle>mvn:org.opendaylight.reservation/connection-models/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/path-models/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/provisioning-models/${project.version}</bundle>
     <bundle>mvn:org.opendaylight.reservation/service-definition-models/${project.version}</bundle>
-  </feature>
+-->  </feature>
 
   <!--<feature name='odl-reservation-pce-service' description="OpenDaylight :: Reservation :: PCE Service" version='${project.version}'>
     <feature>odl-reservation-models</feature>

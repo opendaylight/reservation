@@ -51,7 +51,7 @@
     <properties>
       <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
       <karaf.version>3.0.1</karaf.version>
-      <mdsal.version>1.1-SNAPSHOT</mdsal.version>
+      <mdsal.version>1.2.0-SNAPSHOT</mdsal.version> 
       <nexusproxy>http://nexus.opendaylight.org/content</nexusproxy>
       <controller.model.version>1.1-SNAPSHOT</controller.model.version>
       <commons.opendaylight.version>1.4.2-SNAPSHOT</commons.opendaylight.version>

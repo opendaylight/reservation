@@ -67,10 +67,8 @@
       <xtend.dstdir>src/main/xtend-gen</xtend.dstdir>
       <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
       <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
-      <maven.bundle.version>2.4.0</maven.bundle.version>
       <exi.nagasena.version>0000.0002.0038.0</exi.nagasena.version>
       <yangtools.version>0.7.0-SNAPSHOT</yangtools.version>
-      <bundle.plugin.version>2.4.0</bundle.plugin.version>
       <build.plugins.plugin.version></build.plugins.plugin.version>
     </properties>
 

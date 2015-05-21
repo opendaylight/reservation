@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <prerequisites>
-        <maven>3.0</maven>
-    </prerequisites>
-    <parent>
-        <groupId>org.opendaylight.reservation</groupId>
-        <artifactId>reservation-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>..</relativePath>
-    </parent>
-    <groupId>org.opendaylight.reservation</groupId>
-    <artifactId>models</artifactId>
-    <packaging>pom</packaging>
-    <name>Dynamic Resource Reservation :: Models</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <parent>
+  <groupId>org.opendaylight.yangtools</groupId>
+  <artifactId>binding-parent</artifactId>
+  <version>0.7.0-SNAPSHOT</version>
+  <relativePath />
+ </parent>
+
+ <modelVersion>4.0.0</modelVersion>
+ <groupId>org.opendaylight.reservation</groupId>
+ <artifactId>models</artifactId>
+ <version>1.0.0-SNAPSHOT</version>
+ <packaging>bundle</packaging>
+ <name>Dynamic Resource Reservation :: Models</name>
+
+ <dependencies>
+  <!-- Yang Models -->
+
+  <dependency>
+   <groupId>org.opendaylight.yangtools.model</groupId>
+   <artifactId>ietf-inet-types</artifactId>
+  </dependency>
+ </dependencies>
+
 </project>

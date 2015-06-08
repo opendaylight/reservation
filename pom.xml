@@ -33,8 +33,11 @@
  </scm>
 
  <modules>
-  <module>reservation-service</module>
-  <module>models</module>
+  <module>connection-service</module>
+  <module>connection-model</module>
+  <module>tl1-library</module>
+  <module>tl1-plugin</module>
+  <module>scheduling-model</module>
   <module>features</module>
  </modules>
 

@@ -1,0 +1,290 @@
+/*
+ * Copyright (c) 2015 Inocybe Technologies, Inc. and others.  All rights reserved.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v1.0 which accompanies this distribution,
+ * and is available at http://www.eclipse.org/legal/epl-v10.html
+ */
+module reservation {
+  namespace "urn:opendaylight:reservation";
+  prefix reservation;
+  revision "2014-08-11" {
+    description "Reservation module between 2 ports of a a given switch";
+  }
+  rpc reserve {
+    description "This reserve message allows
+                 an RA to check the feasibility of a connection reservation, or modification an existing connection
+                 reservation. Any resources associated with the reservation or modification operation will be
+                 allocated and held until a reserveCommit message is received for the specific connectionId or a
+                 reservation timeout occurs (whichever arrives first).";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+      }
+      leaf globalReservationId {
+        type string;
+        mandatory false;
+      }
+      leaf description {
+        type string;
+        mandatory false;
+      }
+      leaf criteria {
+        type string;
+        mandatory true;
+      }
+    }
+    output {
+      leaf reserveResponse {
+        type string;
+      }
+    }
+  }
+  rpc reserveCommit {
+    description "The reserveCommit message is sent from an RA to a PA when a reservation or modification to an
+                 existing reservation is being committed. This reservation MUST currently reside in the Reserve Held
+                 state for this operation to be accepted. The reserveCommitACK indicates that the PA has accepted
+                 the modify request for processing. A reserveCommitConfirmed or reserveCommitFailed message
+                 will be sent asynchronously to the RA when reserve or modify processing has completed.";
+     input {
+       leaf connectionId {
+         type string;
+         mandatory true;
+       }
+     }
+     output {
+       leaf acknowledgement {
+         type string;
+       }
+     }
+  }
+  rpc reserveAbort {
+    description "The reserveAbort message is sent from an RA to a PA when an initial reservation request, or
+                 modification to an existing reservation is to be aborted, and the reservation state machine returned
+                 to the previous version of the reservation. The reserveAbortACK indicates that the PA has accepted
+                 the abort request for processing. A reserveAbortConfirmed message will be sent asynchronously to
+                 the RA when the abort processing has completed. There is no associated Failed message for this
+                 operation.";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+      }
+    }
+    output {
+      leaf acknowledgement {
+        type string;
+      }
+    }
+  }
+  rpc provision {
+    description "The provision message is sent from an RA to a PA when an existing reservation is to be
+                 transitioned int32o a provisioned state. The provisionACK indicates that the PA has accepted the
+                 provision request for processing. A provisionConfirmed or message will be sent asynchronously to
+                 the RA when provision processing has completed. There is no associated Failed message for this
+                 operation.";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+       }
+    }
+    output {
+      leaf acknowledgement {
+        type string;
+       }
+    }
+  }
+  rpc release {
+    description "The NSI CS release message allows an RA to transition a previously requested reservation int32o a
+                 released state. A reservation in a released state will deactivate associated data plane resources,
+                 but the reservation is not affected.";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+       }
+    }
+    output {
+      leaf acknowledgement {
+        type string;
+      }
+    }
+  }
+  rpc terminate {
+           description "The NSI CS terminate message allows an RA to transition a previously requested reservation int32o a
+               Terminated state. A reservation in a Terminated state will release all of the associated resources.";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+      }
+    }
+    output {
+      leaf acknowledgement {
+      type string;
+      }
+    }
+  }
+  rpc querySummary {
+    description "The querySummary message provides a mechanism for an RA to query the PA for a set of
+                 connection service reservation instances between the RA-PA pair. This message can be used to
+                 monitor the progress of a reservation.";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+      }
+      leaf globalReservationId {
+        type string;
+        mandatory false;
+      }
+    }
+    output {
+      leaf querySummaryACK{
+        type string;
+      }
+    }
+  }
+
+
+  rpc queryRecursive {
+    description "The queryRecursive message provides a mechanism for an RA to query the PA for a set of
+                 connection service reservation instances between the RA-PA pair. The returned results will be a
+                 detailed list of reservation information collected by recursively traversing the reservation tree.";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+      }
+      leaf globalReservationId {
+        type string;
+        mandatory false;
+      }
+    }
+    output {
+      leaf queryRecursiveACK {
+            type string;
+      }
+    }
+  }
+
+  rpc queryResultSync {
+    description "The queryResultSync message provides a mechanism for an RA to query the PA for a list of
+                 confirmed, failed, and error messages against a connectionId. An RA can recover lost result
+                 messages using this operation, or a polling RA can use it to retrieve a list of result messages for
+                 operations issued.";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+      }
+      leaf startResultId {
+        type string;
+        mandatory false;
+      }
+      leaf endResultId {
+        type string;
+        mandatory false;
+      }
+    }
+    output {
+       leaf queryResultSyncConfirmed {
+          type string;
+       }
+    }
+ }
+  rpc queryResult {
+    description "The queryResult message provides a mechanism for an RA to query the PA for a list of operation
+                 result messages (confirmed, failed, and error) against a connectionId. An RA can recover lost result
+                 messages using this operation";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+      }
+      leaf startResultId {
+        type string;
+        mandatory false;
+      }
+      leaf endResultId {
+        type string;
+        mandatory false;
+      }
+    }
+    output {
+        leaf queryResultACK {
+           type string;
+        }
+    }
+  }
+  rpc queryNotificationSync{
+    description "The queryNotificationSync message provides a mechanism for an RA to query the PA for a list of
+                 notification messages against a connectionId. This operation can be used to recover lost notification
+                 messages, or get a historical list of notifications for analysis.";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+      }
+      leaf startNotificationId {
+        type int32;
+        mandatory false;
+      }
+      leaf endNotificationId{
+        type int32;
+        mandatory false;
+      }
+    }
+    output {
+        leaf queryNotificationSyncConfirmed {
+            type string;
+        }
+    }
+  }
+  rpc queryNotification{
+    description "The queryNotification message provides a mechanism for an RA to query the PA for a list of
+                 notification messages against a connectionId. This operation can be used to recover lost notification
+                 messages, or get a historical list of notifications for analysis.";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+      }
+      leaf startNotificationId {
+        type int32;
+        mandatory false;
+      }
+      leaf endNotificationId {
+        type int32;
+        mandatory false;
+      }
+    }
+    output {
+       leaf queryNotificationACK {
+            type string;
+      }
+    }
+  }
+  rpc querySummarySync{
+    description "The querySummarySync message provides a mechanism for an RA to query the PA for a set of
+                 connection service reservation instances between the RA-PA pair. This message can also be used
+                 as a reservation status polling mechanism.";
+    input {
+      leaf connectionId {
+        type string;
+        mandatory true;
+      }
+      leaf globalReservationId {
+        type string;
+        mandatory false;
+      }
+    }
+    output {
+       leaf querySummarySyncConfirmed {
+           type string;
+       }
+    }
+  }
+}

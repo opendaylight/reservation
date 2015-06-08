@@ -20,7 +20,6 @@
  <groupId>org.opendaylight.reservation</groupId>
  <artifactId>features-reservation</artifactId>
  <version>1.0.0-SNAPSHOT</version>
- <name>Dynamic Resource Reservation :: Features</name>
  <modelVersion>4.0.0</modelVersion>
 
  <properties>

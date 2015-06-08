@@ -10,7 +10,6 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
- <modelVersion>4.0.0</modelVersion>
 
  <parent>
    <groupId>org.opendaylight.odlparent</groupId>
@@ -20,25 +19,31 @@
  </parent>
 
  <groupId>org.opendaylight.reservation</groupId>
- <artifactId>reservation-parent</artifactId>
- <version>0.0.1-SNAPSHOT</version>
- <name>reservation</name> <!-- Used by Sonar to set project name -->
+ <artifactId>connection-service</artifactId>
+ <version>1.0.0-SNAPSHOT</version>
  <packaging>pom</packaging>
 
- <scm>
-  <connection>scm:git:ssh://git.opendaylight.org:29418/reservation.git</connection>
-  <developerConnection>scm:git:ssh://git.opendaylight.org:29418/reservation.git</developerConnection>
-  <url>https://wiki.opendaylight.org/view/Reservation:Main</url>
-  <tag>HEAD</tag>
- </scm>
+ <modelVersion>4.0.0</modelVersion>
+
+ <licenses>
+  <license>
+   <name>Eclipse Public License v1.0</name>
+   <url>http://www.eclipse.org/legal/epl-v10.html</url>
+  </license>
+ </licenses>
+ <developers>
+  <developer>
+  </developer>
+ </developers>
+
+ <prerequisites>
+  <maven>3.1.1</maven>
+ </prerequisites>
 
  <modules>
-  <module>connection-service</module>
-  <module>connection-model</module>
-  <module>tl1-library</module>
-  <module>tl1-southbound</module>
-  <module>scheduling-model</module>
-  <module>features</module>
+  <module>connection-service-api</module>
+  <module>connection-service-impl</module>
+  <module>connection-service-it</module>
  </modules>
 
 </project>

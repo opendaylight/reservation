@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Copyright (c) 2015 Inocybe Technologies Inc. and others.  All rights reserved.
+
+ This program and the accompanying materials are made available under the
+ terms of the Eclipse Public License v1.0 which accompanies this distribution,
+ and is available at http://www.eclipse.org/legal/epl-v10.html
+-->
+
+<snapshot>
+  <required-capabilities>
+    <capability>urn:opendaylight:params:xml:ns:yang:tl1:southbound:impl?module=tl1:southbound-impl&amp;revision=2015-06-08</capability>
+  </required-capabilities>
+  <configuration>
+
+    <data xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <modules xmlns="urn:opendaylight:params:xml:ns:yang:controller:config">
+        <module>
+          <type xmlns:prefix="urn:opendaylight:params:xml:ns:yang:tl1:southbound:impl">prefix:tl1:southbound-impl</type>
+          <name>tl1:southbound-default</name>
+          <broker>
+            <type xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-broker-osgi-registry</type>
+            <name>binding-osgi-broker</name>
+          </broker>
+        </module>
+      </modules>
+    </data>
+  </configuration>
+</snapshot>

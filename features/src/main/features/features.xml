@@ -11,7 +11,6 @@
 <features name="reservation-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
-  <repository>mvn:org.opendaylight.openflowplugin/features-openflowplugin/${openflowplugin.version}/xml/features</repository>
   <repository>mvn:org.opendaylight.controller/features-mdsal/${mdsal.version}/xml/features</repository>
 
   <!--<feature name='odl-reservation-all' description="OpenDaylight :: Reservation :: All" version='${project.version}'>
@@ -20,8 +19,8 @@
 
   <feature name='odl-reservation-models' description="OpenDaylight :: Reservation :: Reservation Service" version='${project.version}'>
     <feature version="${mdsal.version}">odl-mdsal-broker</feature>
-    <bundle>mvn:org.opendaylight.reservation/reservation-service-api/${project.version}</bundle>
-    <bundle>mvn:org.opendaylight.reservation/reservation-service-impl/${project.version}</bundle>
+<!--     <bundle>mvn:org.opendaylight.reservation/reservation-service-api/${project.version}</bundle> -->
+<!--     <bundle>mvn:org.opendaylight.reservation/reservation-service-impl/${project.version}</bundle> -->
   </feature>
 
   <!--<feature name='odl-reservation-pce-service' description="OpenDaylight :: Reservation :: PCE Service" version='${project.version}'>

@@ -15,13 +15,13 @@
  <parent>
    <groupId>org.opendaylight.odlparent</groupId>
    <artifactId>odlparent</artifactId>
-   <version>1.5.0-Lithium</version>
+   <version>1.5.1-SNAPSHOT</version>
    <relativePath/>
  </parent>
 
  <groupId>org.opendaylight.reservation</groupId>
  <artifactId>reservation-parent</artifactId>
- <version>0.0.1-Lithium</version>
+ <version>0.0.2-SNAPSHOT</version>
  <name>reservation</name> <!-- Used by Sonar to set project name -->
  <packaging>pom</packaging>
 

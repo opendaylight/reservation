@@ -14,13 +14,13 @@
  <parent>
   <groupId>org.opendaylight.odlparent</groupId>
   <artifactId>odlparent</artifactId>
-  <version>1.5.0-Lithium</version>
+  <version>1.5.1-SNAPSHOT</version>
   <relativePath />
  </parent>
 
  <groupId>org.opendaylight.reservation</groupId>
  <artifactId>tl1-southbound</artifactId>
- <version>1.0.0-Lithium</version>
+ <version>1.0.1-SNAPSHOT</version>
  <packaging>pom</packaging>
 
  <modelVersion>4.0.0</modelVersion>

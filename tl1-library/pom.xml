@@ -32,4 +32,49 @@
   </dependency>
  </dependencies>
 
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${checkstyle.version}</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.opendaylight.odlparent</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>${odl.checkstyle.version}</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <id>check-license</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>process-sources</phase>
+            <configuration>
+              <configLocation>check-license.xml</configLocation>
+              <includeResources>false</includeResources>
+              <includeTestResources>false</includeTestResources>
+              <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+              <excludes>
+                org/opendaylight/yang/gen/**,
+                **/config/yang/**,
+                **/protobuff/messages/**,
+                **/thrift/gen/*.java,
+                <!-- Skip Apache Licensed files -->
+                org/opendaylight/reservation/tl1/exceptions/EngineException.java,
+                org/opendaylight/reservation/tl1/exceptions/FailedCmdException.java,
+                org/opendaylight/reservation/tl1/exceptions/UnsupportedException.java,
+                org/opendaylight/reservation/tl1/library/protocol/IProtocol.java,
+                org/opendaylight/reservation/tl1/transport/ITransport.java
+              </excludes>
+              <failsOnError>false</failsOnError>
+              <consoleOutput>true</consoleOutput>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>

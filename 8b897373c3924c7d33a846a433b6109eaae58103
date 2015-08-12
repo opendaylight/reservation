@@ -1,0 +1,8 @@
+Verified+1: jenkins-releng <jenkins-releng@opendaylight.org>
+Code-Review+1: Thanh Ha <thanh.ha@linuxfoundation.org>
+Code-Review+2: Mathieu Lemay <mlemay@inocybe.com>
+Submitted-by: Mathieu Lemay <mlemay@inocybe.com>
+Submitted-at: Wed, 12 Aug 2015 12:04:08 +0000
+Reviewed-on: https://git.opendaylight.org/gerrit/25068
+Project: reservation
+Branch: refs/heads/master

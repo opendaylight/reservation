@@ -17,7 +17,7 @@
   <repository>mvn:org.opendaylight.controller/features-restconf/${mdsal.version}/xml/features</repository>
 
   <feature name='odl-reservation-tl1-southbound-api' version='${project.version}' description='OpenDaylight :: Reservation :: tl1 :: api '>
-    <feature version='${yangtools.version}'>odl-yangtools-models</feature>
+    <feature version='${yangtools.version}'>odl-mdsal-models</feature>
     <bundle>mvn:org.opendaylight.reservation/tl1-southbound-api/${project.version}</bundle>
   </feature>
   <feature name='odl-reservation-tl1-southbound-impl' version='${project.version}' description='OpenDaylight :: Reservation :: tl1 :: impl '>

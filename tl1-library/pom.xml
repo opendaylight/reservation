@@ -36,14 +36,6 @@
     <plugins>
       <plugin>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>${checkstyle.version}</version>
-        <dependencies>
-          <dependency>
-            <groupId>org.opendaylight.odlparent</groupId>
-            <artifactId>checkstyle</artifactId>
-            <version>${odl.checkstyle.version}</version>
-          </dependency>
-        </dependencies>
         <executions>
           <execution>
             <id>check-license</id>

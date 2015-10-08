@@ -12,13 +12,13 @@
   <parent>
     <groupId>org.opendaylight.odlparent</groupId>
     <artifactId>features-parent</artifactId>
-    <version>1.5.2-Lithium-SR2</version>
+    <version>1.5.3-SNAPSHOT</version>
     <relativePath></relativePath>
   </parent>
 
   <groupId>org.opendaylight.reservation</groupId>
   <artifactId>tl1-southbound-features</artifactId>
-  <version>1.0.2-Lithium-SR2</version>
+  <version>1.0.3-SNAPSHOT</version>
   <name>${project.artifactId}</name>
   <modelVersion>4.0.0</modelVersion>
 
@@ -48,8 +48,8 @@
   </prerequisites>
 
   <properties>
-    <mdsal.version>1.2.2-Lithium-SR2</mdsal.version>
-    <yangtools.version>0.7.2-Lithium-SR2</yangtools.version>
+    <mdsal.version>1.2.3-SNAPSHOT</mdsal.version>
+    <yangtools.version>0.7.3-SNAPSHOT</yangtools.version>
   </properties>
 
   <dependencyManagement>

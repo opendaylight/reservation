@@ -79,6 +79,7 @@
       <classifier>features</classifier>
       <type>xml</type>
       <scope>runtime</scope>
+      <version>${project.version}</version>
     </dependency>
   </dependencies>
 </project>

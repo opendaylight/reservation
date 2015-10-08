@@ -129,7 +129,7 @@ public class TL1Session implements IProtocol {
     /**
      * Opens a connection to the specific host/port
      *
-     * @throws FailedCmdException
+     * @throws ProtocolException
      *             Exception thrown if command failed
      */
     public void startSession() throws ProtocolException {
@@ -148,7 +148,7 @@ public class TL1Session implements IProtocol {
      * @param req
      *            Command to send in TL1InputMsg Format
      * @return TL1ResponseMsg
-     * @throws FailedCmdException
+     * @throws ProtocolException
      *             Exception thrown if command failed
      */
     public Object send(Object req) throws ProtocolException {

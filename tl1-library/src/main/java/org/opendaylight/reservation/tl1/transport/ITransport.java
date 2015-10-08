@@ -34,10 +34,10 @@ import org.opendaylight.reservation.tl1.library.protocol.IProtocol;
  * <b>History</b> <br>
  * <p>
  * 2006/04: Change in the transport to be integrated in the engine. <br>
- * Inocybe Technologies - Copyright &copy 2006 <br>
+ * Inocybe Technologies - Copyright (c) 2006 <br>
  * <p>
  * 2003/08: Initial file creation. <br>
- * Communications Research Centre and University of Ottawa - Copyright &copy 2003 <br>
+ * Communications Research Centre and University of Ottawa - Copyright (c) 2003 <br>
  * <p>
  * @author Mathieu Lemay - Research Technologist, Communications Research Centre
  * @version 2.0
@@ -88,13 +88,11 @@ public interface ITransport
 
 		/** Sends a raw string to the device
 		 * @param rawInput Sends String to send
-	     * @throws IOException
 		 */
 		public void sendMsg(String rawInput);
 
 		/** Receives a raw string from the device
 		 * @return String rawOutput
-		 * @throws IOException
 		 */
 		public String getMsg();
 

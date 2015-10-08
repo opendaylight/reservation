@@ -22,8 +22,6 @@ public class TL1Section {
 	/**
 	 * Creates a new instance of TL1Section
 	 *
-	 * @param section
-	 *            raw Section data to parse
 	 */
 	public TL1Section() {
 

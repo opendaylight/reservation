@@ -14,10 +14,12 @@
 
   <repository>mvn:org.opendaylight.yangtools/features-yangtools/${yangtools.version}/xml/features</repository>
   <repository>mvn:org.opendaylight.controller/features-mdsal/${mdsal.version}/xml/features</repository>
-  <repository>mvn:org.opendaylight.controller/features-restconf/${mdsal.version}/xml/features</repository>
+  <repository>mvn:org.opendaylight.netconf/features-restconf/${netconf.version}/xml/features</repository>
+  <repository>mvn:org.opendaylight.mdsal.model/features-mdsal-model/${mdsal.model.version}/xml/features</repository>
+  
 
   <feature name='odl-reservation-tl1-southbound-api' version='${project.version}' description='OpenDaylight :: Reservation :: tl1 :: api '>
-    <feature version='${yangtools.version}'>odl-mdsal-models</feature>
+    <feature version='${mdsal.model.version}'>odl-mdsal-models</feature>
     <bundle>mvn:org.opendaylight.reservation/tl1-southbound-api/${project.version}</bundle>
   </feature>
   <feature name='odl-reservation-tl1-southbound-impl' version='${project.version}' description='OpenDaylight :: Reservation :: tl1 :: impl '>
@@ -28,7 +30,7 @@
   </feature>
   <feature name='odl-reservation-lt1-southbound-impl-rest' version='${project.version}' description='OpenDaylight :: Reservation :: lt1 :: impl :: REST '>
     <feature version="${project.version}">odl-reservation-tl1-southbound-impl</feature>
-    <feature version="${mdsal.version}">odl-restconf</feature>
+    <feature version="${netconf.version}">odl-restconf</feature>
   </feature>
   <feature name='odl-reservation-lt1-southbound-impl-ui' version='${project.version}' description='OpenDaylight :: Reservation :: lt1 :: impl :: UI'>
     <feature version="${project.version}">odl-reservation-lt1-southbound-impl-rest</feature>

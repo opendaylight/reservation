@@ -23,7 +23,7 @@ package org.opendaylight.reservation.tl1.exceptions;
 /** Exception sent when a command has failed in the wrapper
  *
  * <p><b>Organization:</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- * Communications Research Centre and University of Ottawa - Copyright &copy 2003
+ * Communications Research Centre and University of Ottawa - Copyright (c) 2003
  * @author Mathieu Lemay
  * @author Research Technologist Communications Research Centre
  * @version 1.0

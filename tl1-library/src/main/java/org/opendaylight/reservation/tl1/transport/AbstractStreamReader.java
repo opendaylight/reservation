@@ -57,7 +57,6 @@ public abstract class AbstractStreamReader implements Runnable {
 
 	/**
 	 * Construct a Stream Reader giving it the stream
-	 * @param in
 	 */
 	public AbstractStreamReader()
 	{

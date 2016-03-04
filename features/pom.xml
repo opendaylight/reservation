@@ -13,18 +13,18 @@
  <parent>
   <groupId>org.opendaylight.odlparent</groupId>
   <artifactId>features-parent</artifactId>
-  <version>1.5.4-SNAPSHOT</version>
+  <version>1.5.4-Lithium-SR4</version>
   <relativePath />
  </parent>
 
  <groupId>org.opendaylight.reservation</groupId>
  <artifactId>features-reservation</artifactId>
- <version>1.0.4-SNAPSHOT</version>
+ <version>1.0.4-Lithium-SR4</version>
  <modelVersion>4.0.0</modelVersion>
 
  <properties>
-  <mdsal.version>1.2.4-SNAPSHOT</mdsal.version>
-  <openflowplugin.version>0.1.4-SNAPSHOT</openflowplugin.version>
+  <mdsal.version>1.2.4-Lithium-SR4</mdsal.version>
+  <openflowplugin.version>0.1.4-Lithium-SR4</openflowplugin.version>
  </properties>
 
  <dependencyManagement>

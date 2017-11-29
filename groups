@@ -1,7 +1,4 @@
-# UUID                                  	Group Name
+# UUID                                                                	Group Name
 #
-060b5ee415b76d8389960e1d2d58b95436e4296c	Non-interactive reservation users
-c9025ab9ddc1e3171919e085449f22c54f8f7b54	GitHub Replication
-global:Anonymous-Users                  	Anonymous Users
-global:Registered-Users                 	Registered Users
+c9025ab9ddc1e3171919e085449f22c54f8f7b54                              	GitHub Replication
 ldap:cn=gerrit-reservation-committers,ou=Groups,dc=opendaylight,dc=org	ldap/gerrit-reservation-committers
